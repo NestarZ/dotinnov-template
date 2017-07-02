@@ -1,0 +1,17 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+	{% if post.thumbnail.src %}
+		<div class="col-lg-12 col-md-12 col-xs-12">
+			<a href="{{post.link}}"><div id="circle_post{{post.ID}}" class="responsive-circle"></div>
+			<div class="circle-inner"></div></a>
+		</div>
+	{% endif %}
+	<div class="col-lg-12 col-md-12 col-xs-12" style="margin-top: 0px; padding: 0">
+		<h2 class="article-title"><a href="{{post.link}}">{{post.title}}</a></h2>
+		<p class="byline">
+			Écrit le <span class="date">{{post.post_date|date('F j, Y')}}</span>
+			par <span class="name">{{post.author.name}}</span>
+		</p>
+	</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+	<div id="random_circles" class="frontdot"></div>
+	<body id="{{body_id}}" class="{{body_class}}" data-template="base.1.twig" {{body_elements}}>
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+						Menu <i class="fa fa-bars"></i>
+					</button>
+					<a class="navbar-brand page-scroll" href="{{site.url}}#page-top">
+						<i class="fa fa-play-circle"></i> {{site.name}}
+					</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+					{% include "menu.1.twig" with {'menu': menu.get_items} %}
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
+
+
+		<header class="intro">
+			{% block header %}
+				<div class="intro-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<h1 class="brand-heading">
+									<img src="{{site.theme.link}}/templates/data/image/logo1.svg" alt="{{site.name}}" height=230>
+								</h1>
+								<p class="intro-text">Nous sommes des agitateurs cognitifs.<br>Nous nous questionnons en permanence sur le fonctionnement du cerveau et du comportement. Et nous mettons ce questionnement au service de tous.</p>
+								<a href="#about" id="aboutbtn" class="btn btn-circle page-scroll shake-slow">
+									Nous Découvrir
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endblock %}
+		</header>
+
+		<section id="content" role="main" class="content-wrapper">
+			{% if title %}<h1>{{title}}</h1>{% endif %}
+			<div class="wrapper {{sidebar_class}}">
+				{% block content %}
+					Sorry, no content
+				{% endblock %}
+			</div>
+			{% if sidebar %}
+				<aside class="layout-sidebar">
+					{{sidebar}}
+				</aside>
+			{% endif %}
+		</section>
+
+		{% block footer %}
+			<footer id="footer">
+				{% include 'footer.twig' %}
+			</footer>
+			{{ function('wp_footer') }}
+		{% endblock %}
+	</body>
+</html>

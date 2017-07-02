@@ -1,0 +1,31 @@
+<article class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
+	<style>
+	#circle_post{{post.ID}}::after {
+		background: url({{post.thumbnail.src}}) repeat scroll 0 0 / cover ;
+		-o-transition:.5s;
+		-ms-transition:.5s;
+		-moz-transition:.5s;
+		-webkit-transition:.5s;
+		/* ...and now for the proper property */
+		transition:.5s;
+		z-index: -1;
+	}
+	#circle_post{{post.ID}}:hover::after {
+		opacity: 0.2;
+		z-index: -1;
+	}
+	#circle_post{{post.ID}}:hover .circle-inner {
+		visibility: visible;
+		color: black;
+		font-size: 15px;
+		z-index: -1;position:relative;
+	}
+	</style>
+	{% block content %}
+		<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
+		<p>{{post.get_preview}}</p>
+		{% if post.get_thumbnail %}
+			<img src="{{post.thumbnail.src}}" />
+		{% endif %}
+	{% endblock %}
+</article>

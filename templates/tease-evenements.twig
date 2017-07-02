@@ -1,0 +1,14 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+	{% if post.thumbnail.src %}
+		<div class="col-lg-6 col-md-12 col-xs-12">
+			<div id="circle_post{{post.ID}}" class="responsive-circle"></div>
+			<div class="circle-inner"></div>
+		</div>
+	{% endif %}
+	<div class="col-lg-6 col-md-12 col-xs-12" style="margin-top: 0px; padding: 0">
+		<h2><a href="{{post.link}}">{{post.title}}</a></h2>
+			<p>{{post.get_preview(25)}}</p>
+	</div>
+{% endblock %}

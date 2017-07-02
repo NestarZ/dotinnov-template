@@ -1,0 +1,103 @@
+/*
+ * Theme Name: My Timber Starter Theme
+ * Description: Starter Theme to use with Timber
+ * Author: Upstatement and YOU!
+*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@charset "utf-8";
+@font-face {
+	font-family: "Raleway-ExtraBold";
+	src: url(./fonts/raleway/Raleway-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Raleway-Regular";
+	src: url(./fonts/raleway/Raleway-Regular.ttf) format("truetype");
+}
+@font-face {
+	font-family: "Raleway-Bold";
+	src: url(./fonts/raleway/Raleway-Bold.ttf) format("truetype");
+}
+@font-face {
+	font-family: "Raleway-SemiBold";
+	src: url(./fonts/raleway/Raleway-SemiBold.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Raleway-Medium";
+	src: url(./fonts/raleway/Raleway-Medium.ttf) format("truetype");
+}
+@font-face {
+	font-family: "AvenirLTStd-Medium";
+	src: url(./fonts/avenir_ltd/AvenirLTStd-Medium.otf) format("truetype");
+}
+
+@font-face {
+	font-family: "AvenirLTStd-Light";
+	src: url(./fonts/avenir_ltd/AvenirLTStd-Light.otf) format("truetype");
+}
+@font-face {
+	font-family: "AvenirLTStd-Book";
+	src: url(./fonts/avenir_ltd/AvenirLTStd-Book.otf) format("truetype");
+}
+@font-face {
+	font-family: "AvenirLTStd-Black";
+	src: url(./fonts/avenir_ltd/AvenirLTStd-Black.otf) format("truetype");
+}
+@font-face {
+	font-family: "AvenirLTStd-Roman";
+	src: url(./fonts/avenir_ltd/AvenirLTStd-Roman.otf) format("truetype");
+}
+@font-face {
+	font-family: "AvenirLTStd-BookOblique";
+	src: url(./fonts/avenir_ltd/AvenirLTStd-BookOblique.otf) format("truetype");
+}
+@font-face {
+	font-family: "AvenirLTStd-Heavy";
+	src: url(./fonts/avenir_ltd/AvenirLTStd-Heavy.otf) format("truetype");
+}
+
+body {
+    font-family: "AvenirLTStd-Light", sans-serif;
+    color: #313233;
+}
+.retour-cat {
+    margin-bottom: 0px !important;
+}
+.retour-cat {
+    display: inline-block;
+    float: none;
+    text-decoration: lowercase;
+    color: black !important;
+    font-family: 'Raleway-ExtraBold';
+    margin: 10px 38px;
+    font-size: 20px;
+}
+ul {
+    list-style-type: none;
+    margin: 0 1.5em 1.5em 0em;
+    padding-left: 1.5em;
+}
+ul {
+    list-style: disc;
+}
+ul, ol {
+    margin: 0 0 1.5em 3em;
+}
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
